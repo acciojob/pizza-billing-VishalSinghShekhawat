@@ -18,10 +18,10 @@ public class Pizza {
         // your code goes here
         if(isVeg){
             price += 300;
-            bill = "Base Price Of the Pizza: 300\n";
+            bill = "Base Price Of The Pizza: 300\n";
         }else{
             price += 400;
-            bill = "Base Price Of the Pizza: 400\n";
+            bill = "Base Price Of The Pizza: 400\n";
         }
     }
 
@@ -41,7 +41,7 @@ public class Pizza {
     public void addExtraToppings(){
         // your code goes here
         if(!isExtraToppings) {
-            addExtraCheese();
+            //addExtraCheese();
             if (isVeg) {
                 price += 70;
                 bill += "Extra Toppings Added: 70\n";
