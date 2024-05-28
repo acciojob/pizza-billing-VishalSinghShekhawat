@@ -11,16 +11,17 @@ public class Pizza {
     private Boolean isExtraToppings = false;
 
     private Boolean isTakeAway = false;
+    private Boolean isBill = false;
 
     public Pizza(Boolean isVeg){
         this.isVeg = isVeg;
         // your code goes here
         if(isVeg){
             price += 300;
-            bill = "Base Price of the Pizza: 300\n";
+            bill = "Base Price Of the Pizza: 300\n";
         }else{
             price += 400;
-            bill = "Base Price of the Pizza: 400\n";
+            bill = "Base Price Of the Pizza: 400\n";
         }
     }
 
@@ -61,9 +62,12 @@ public class Pizza {
         }
     }
 
-    public String getBill(){
+    public String getBill() {
         // your code goes here
-        bill += "Total Price: "+price;
+        if (!isBill){
+            bill += "Total Price: " + price + "\n";
+            isBill = true;
+    }
         return this.bill;
     }
 }
